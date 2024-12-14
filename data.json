@@ -1,0 +1,169 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "genre": "Fiction",
+      "publication_year": 1960,
+      "isbn": "978-0061120084",
+      "pages": 324,
+      "language": "English",
+      "publisher": "J.B. Lippincott & Co."
+    },
+    {
+      "id": 2,
+      "title": "1984",
+      "author": "George Orwell",
+      "genre": "Dystopian",
+      "publication_year": 1949,
+      "isbn": "978-0451524935",
+      "pages": 328,
+      "language": "English",
+      "publisher": "Secker & Warburg"
+    },
+    {
+      "id": 3,
+      "title": "Pride and Prejudice",
+      "author": "Jane Austen",
+      "genre": "Romance",
+      "publication_year": 1813,
+      "isbn": "978-1503290563",
+      "pages": 279,
+      "language": "English",
+      "publisher": "T. Egerton"
+    },
+    {
+      "id": 4,
+      "title": "The Great Gatsby",
+      "author": "F. Scott Fitzgerald",
+      "genre": "Tragedy",
+      "publication_year": 1925,
+      "isbn": "978-0743273565",
+      "pages": 180,
+      "language": "English",
+      "publisher": "Charles Scribner's Sons"
+    },
+    {
+      "id": 5,
+      "title": "Moby-Dick",
+      "author": "Herman Melville",
+      "genre": "Adventure",
+      "publication_year": 1851,
+      "isbn": "978-1503280786",
+      "pages": 635,
+      "language": "English",
+      "publisher": "Harper & Brothers"
+    },
+    {
+      "id": 6,
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "genre": "Historical Fiction",
+      "publication_year": 1869,
+      "isbn": "978-1420959715",
+      "pages": 1225,
+      "language": "Russian",
+      "publisher": "The Russian Messenger"
+    },
+    {
+      "id": 7,
+      "title": "The Catcher in the Rye",
+      "author": "J.D. Salinger",
+      "genre": "Fiction",
+      "publication_year": 1951,
+      "isbn": "978-0316769488",
+      "pages": 277,
+      "language": "English",
+      "publisher": "Little, Brown and Company"
+    },
+    {
+      "id": 8,
+      "title": "The Hobbit",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "publication_year": 1937,
+      "isbn": "978-0547928227",
+      "pages": 310,
+      "language": "English",
+      "publisher": "George Allen & Unwin"
+    },
+    {
+      "id": 9,
+      "title": "Crime and Punishment",
+      "author": "Fyodor Dostoevsky",
+      "genre": "Philosophical Fiction",
+      "publication_year": 1866,
+      "isbn": "978-0486415871",
+      "pages": 671,
+      "language": "Russian",
+      "publisher": "The Russian Messenger"
+    },
+    {
+      "id": 10,
+      "title": "The Odyssey",
+      "author": "Homer",
+      "genre": "Epic Poetry",
+      "publication_year": -800,
+      "isbn": "978-0140268867",
+      "pages": 541,
+      "language": "Greek",
+      "publisher": "Unknown"
+    },
+    {
+      "id": 11,
+      "title": "Brave New World",
+      "author": "Aldous Huxley",
+      "genre": "Science Fiction",
+      "publication_year": 1932,
+      "isbn": "978-0060850524",
+      "pages": 268,
+      "language": "English",
+      "publisher": "Chatto & Windus"
+    },
+    {
+      "id": 12,
+      "title": "The Divine Comedy",
+      "author": "Dante Alighieri",
+      "genre": "Epic Poetry",
+      "publication_year": 1320,
+      "isbn": "978-0140448955",
+      "pages": 798,
+      "language": "Italian",
+      "publisher": "Unknown"
+    },
+    {
+      "id": 13,
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "genre": "Gothic Fiction",
+      "publication_year": 1818,
+      "isbn": "978-0486282114",
+      "pages": 280,
+      "language": "English",
+      "publisher": "Lackington, Hughes, Harding, Mavor & Jones"
+    },
+    {
+      "id": 14,
+      "title": "The Lord of the Rings",
+      "author": "J.R.R. Tolkien",
+      "genre": "Fantasy",
+      "publication_year": 1954,
+      "isbn": "978-0618640157",
+      "pages": 1178,
+      "language": "English",
+      "publisher": "George Allen & Unwin"
+    },
+    {
+      "id": 15,
+      "title": "Dracula",
+      "author": "Bram Stoker",
+      "genre": "Horror",
+      "publication_year": 1897,
+      "isbn": "978-0486411095",
+      "pages": 418,
+      "language": "English",
+      "publisher": "Archibald Constable and Company"
+    }
+  ]
+}
