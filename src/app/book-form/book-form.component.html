@@ -1,0 +1,75 @@
+@if (book) {
+
+
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Data of book</h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="title" class="form-label">Title:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                aria-describedby="emailHelp"
+                [value]="book.title"
+                (change)="book.title = getvalue($event)"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="author" class="form-label">Author:</label>
+              <input type="text" class="form-control" id="author" [value]="book.author" (change)="book.author = getvalue($event)"/>
+            </div>
+            <div class="mb-3">
+              <label for="genre" class="form-label">Genre:</label>
+              <input type="text" class="form-control" id="genre" [value]="book.genre" (change)="book.genre = getvalue($event)"/>
+            </div>
+            <div class="mb-3">
+              <label for="pub_year" class="form-label">Publication year:</label>
+              <input type="number" class="form-control" id="pub_year" [value]="book.publication_year" (change)="book.publication_year = getnumber($event)"/>
+            </div>
+            <div class="mb-3">
+              <label for="isbn" class="form-label">ISBN:</label>
+              <input type="text" class="form-control" id="isbn" [value]="book.isbn" (change)="book.isbn = getvalue($event)"/>
+            </div>
+            <div class="mb-3">
+              <label for="pages" class="form-label">Pages:</label>
+              <input type="number" class="form-control" id="pages" [value]="book.pages" (change)="book.pages = getnumber($event)"/>
+            </div>
+            <div class="mb-3">
+              <label for="language" class="form-label">Language:</label>
+              <input type="text" class="form-control" id="language" [value]="book.language" (change)="book.language = getvalue($event)"/>
+            </div>
+            <div class="mb-3">
+              <label for="publisher" class="form-label">Publisher:</label>
+              <input type="text" class="form-control" id="publisher" [value]="book.publisher" (change)="book.publisher = getvalue($event)"/>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+            Close
+          </button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="saveBook()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+}
+
