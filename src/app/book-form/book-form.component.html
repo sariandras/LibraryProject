@@ -1,12 +1,9 @@
 @if (book) {
-
-
   <div
-    class="modal fade"
+    class="modal"
     id="exampleModal"
     tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-hidden="true"
+
   >
     <div class="modal-dialog">
       <div class="modal-content">
@@ -17,6 +14,7 @@
             class="btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
+            (click)="cancel()"
           ></button>
         </div>
         <div class="modal-body">
@@ -63,7 +61,7 @@
           </form>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancel()">
             Close
           </button>
           <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="saveBook()">Save changes</button>

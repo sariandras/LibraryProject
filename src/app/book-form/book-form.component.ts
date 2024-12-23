@@ -21,7 +21,6 @@ export class BookFormComponent {
   }
   saveBook() {
     this.save.emit(this.book);
-
   }
   cancel() {
     this.cancelledForm.emit();

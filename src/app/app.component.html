@@ -1,16 +1,14 @@
 <h1 class="text-center">Library application</h1>
 <div class="container">
-  <h2>Available books:</h2>
   <br />
   <button
     type="button"
-    class="btn btn-success"
-    data-bs-toggle="modal"
-    data-bs-target="#exampleModal"
+    class="btn btn-success newBook"
     (click)="setNewBook()"
   >
     New book
   </button>
+  <h2>Available books:</h2>
 
   <table class="table table-hover">
   <thead>
@@ -35,6 +33,5 @@
     }
   </tbody>
 </table>
-
-  <app-book-form [book]="newBook == undefined ? modifyBook: newBook" (cancelledForm)="newBook=undefined;modifyBook=undefined;" (save)="saveBook($event)"></app-book-form>
+  <app-book-form [book]="selectedBook" (cancelledForm)="selectedBook = undefined;" (save)="saveBook($event)"></app-book-form>
 </div>

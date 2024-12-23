@@ -11,12 +11,10 @@ import { DataService } from './services/data.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  modifyBook: Book | undefined = undefined;
-  newBook: Book | undefined = undefined;
+  selectedBook :Book|undefined = undefined;
   books: Book[] | null = null;
 
   constructor(private dataService: DataService) {
-    this.setNewBook();
   }
 
   deleteBook(book: Book) {
@@ -31,11 +29,11 @@ export class AppComponent implements OnInit {
     }
   }
   setModifyBook(book: Book) {
-    this.modifyBook = JSON.parse(JSON.stringify(book));
-    console.log(this.modifyBook)
+    this.selectedBook = JSON.parse(JSON.stringify(book));
   }
   setNewBook() {
-    this.newBook = {
+    this.selectedBook = {
+      id:undefined,
       author: '',
       genre: '',
       isbn: '',
@@ -54,12 +52,24 @@ export class AppComponent implements OnInit {
   }
   saveBook(book: Book) {
     //TODO: messagebox
-    this.dataService.addBook(book).subscribe({
-      next: (data:Book) => {
-        this.books?.push(book);
-        this.newBook = undefined;
-      },
-      error: (error: Error) => console.log(error.message),
-    });
+    if (book.id == undefined) {
+      this.dataService.addBook(book).subscribe({
+        next: (data:Book) => {
+          this.books!.push(data);
+          this.selectedBook = undefined;
+        },
+        error: (error: Error) => console.log(error.message)
+      });
+    }else{
+      this.dataService.modifyBook(book).subscribe({
+        next: (data: Book) => {
+          let index = this.books!.findIndex((b) => b.id == data.id);
+          this.books![index] = data;
+          this.selectedBook = undefined;
+        },
+        error: (error: Error) => console.log(error.message),
+      });
+    }
+
   }
 }
