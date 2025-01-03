@@ -2,17 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { BookFormComponent } from './book-form/book-form.component';
 import { Book } from './models/book.model';
 import { DataService } from './services/data.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [BookFormComponent],
+  imports: [BookFormComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
   selectedBook :Book|undefined = undefined;
   books: Book[] | null = null;
+  message:string|undefined=undefined;
 
   constructor(private dataService: DataService) {
   }
@@ -51,7 +53,6 @@ export class AppComponent implements OnInit {
     });
   }
   saveBook(book: Book) {
-    //TODO: messagebox
     if (book.id == undefined) {
       this.dataService.addBook(book).subscribe({
         next: (data:Book) => {

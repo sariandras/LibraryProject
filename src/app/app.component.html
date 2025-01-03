@@ -1,6 +1,12 @@
-<h1 class="text-center">Library application</h1>
-<div class="container">
+<div class="container" [ngClass]="selectedBook == undefined ? '': 'blur'">
+  <h1 class="text-center">Library application</h1>
   <br />
+  @if (message) {
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="message=undefined;"></button>
+  </div>
+  }
   <button
     type="button"
     class="btn btn-success newBook"
@@ -9,7 +15,6 @@
     New book
   </button>
   <h2>Available books:</h2>
-
   <table class="table table-hover">
   <thead>
     <tr>
@@ -27,11 +32,11 @@
         <td>{{book.genre}}</td>
         <td>
           <button type="button" class="btn btn-warning" (click)="setModifyBook(book)">Modify</button>
-          <button type="button" class="btn btn-danger" (click)="deleteBook(book)">Delete</button>
+          <button type="button" class="btn btn-danger" (click)="deleteBook(book);message='Successfully deleted a book!'">Delete</button>
         </td>
       </tr>
     }
   </tbody>
 </table>
-  <app-book-form [book]="selectedBook" (cancelledForm)="selectedBook = undefined;" (save)="saveBook($event)"></app-book-form>
 </div>
+<app-book-form [book]="selectedBook" (cancelledForm)="selectedBook = undefined;" (save)="saveBook($event);message='Successfully saved a book!'"></app-book-form>
